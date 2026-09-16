@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add elements in Set </title>
+</head>
+<body>
+    <p id="demo"></p>
+
+
+    <script>
+        const letter = new Set();
+        letter.add("12");
+        letter.add("35");
+        letter.add("10");
+        letter.add("12");   // aa add nahi thay because ekvar 12 aavi gya che.
+
+        document.getElementById("demo").innerHTML= letter.size;
+    </script>
+</body>
+</html>

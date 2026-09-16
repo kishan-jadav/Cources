@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>g -> Global Flag</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+
+    <script>
+        let text = "This is Dubai, Dubai is so expensive.";
+        const pattern = /Dubai/g;
+
+        let n = text.match(pattern);
+        // let n = text.match(/Dubai/g);
+
+
+        document.getElementById("demo").innerHTML = n;
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+<!-- The screen.availWidth property returns the width of the visitor's screen, in pixels, minus interface features like the Windows Taskbar. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+    <script>
+        document.getElementById("demo").innerHTML = 
+        "Available screen height: " + screen.availHeight + "px <br>" +
+        "Available screen width: " + screen.availWidth + "px <br>";
+    </script>
+</body>
+</html>

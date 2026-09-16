@@ -1,0 +1,31 @@
+<!-- Cookies are data, stored in small text files, on your computers. -->
+
+<!-- document.cookie = "name=value; expires=date; path=path; domain=domain; secure"; -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        // create cookie
+        document.cookie = 'username = Kishan Jadav';
+
+        // change cookie
+        // x = document.cookie = "username = vishal makwana"
+        // document.getElementById("demo").innerHTML = x;
+        
+        // delete cookie
+        x = document.cookie("username=Kishan Jadav; expires=01 Jan 1970 00:00:00 UTC; path=/;")
+        document.getElementById("demo").innerHTML = x;
+        
+        // read cookie
+        // let x = document.cookie;
+        // document.getElementById("demo").innerHTML = x;
+    </script>
+</body>
+</html>

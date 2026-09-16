@@ -1,0 +1,23 @@
+<!-- The window.location object can be used to get the current page address (URL) and to redirect the browser to a new page. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+    <script>
+        document.getElementById("demo").innerHTML = 
+        "Page Location is: " + window.location.href + "<br>" + 
+        "Page Hostname is: " + window.location.hostname + "<br>" + 
+        "Page path is: " + window.location.pathname + "<br>" +
+        "Page protocol is: " + window.location.protocol + "<br>" +
+        "Port number is: " + window.location.port ;
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1 id="screen"></h1>
+    <script>
+        // Screen select karo
+        const screen = document.getElementById("screen");
+
+        // Starting number
+        let count = 10;
+
+        // Har 1 second mein chalega
+        const timer = setInterval(function () {
+            // Number screen par dikhao
+            screen.textContent = count;
+            console.log(count);
+
+            // 0 par timer stop karo
+            if (count === 0) {
+                clearInterval(timer);
+                console.log("Finished!");
+                return;
+            }
+
+            // Number 1 kam karo
+            count--;
+        }, 1000);
+    </script>
+
+</body>
+
+</html>

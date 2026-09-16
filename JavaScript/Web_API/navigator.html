@@ -1,0 +1,28 @@
+<!-- The navigator object contains information about the visitor's browser -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigator</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+    <script>
+        document.getElementById("demo").innerHTML = 
+        "Cookie is enabled: " + navigator.cookieEnabled + "<br>" +
+        "Browser language is: " + navigator.language + "<br>" + 
+        "Browser is Online: " + navigator.onLine + "<br>" +     // onLine me L capital he
+        "Browser Application name: " + navigator.appName + "<br>" +
+        "Browser App Code Name: " + navigator.appCodeName + "<br>" + 
+        "Browser Product name: " + navigator.product + "<br>" + 
+        "Browser version: " + navigator.appVersion + "<br>" + 
+        "Browser Agent: " + navigator.userAgent + "<br>" + 
+        "Browser platform: " + navigator.platform + "<br>" +
+        "Javascript Enabled: " + navigator.javaEnabled(); // latest browser ma always false return kare
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup Alert</title>
+</head>
+<body>
+    <button onclick="alertBox()">Alert Box</button> 
+    <button onclick="confirmBox()">Confirm Box</button>
+    <button onclick="promptBox()">Prompt Box</button>
+
+
+    <p id="demo"></p>
+    <script>
+        function alertBox(){
+            alert("I am an Alert Box");
+        }
+
+        function confirmBox(){
+            var txt = "";
+            if(confirm("Press a button")){
+                txt = "You pressed OK!";
+            }else{
+                txt = "You pressed Cancel!";
+            }
+            document.getElementById("demo").innerHTML = txt;
+        }
+
+        function promptBox(){       // not run in vscode browser
+            var txt = "";
+            let person = prompt("Enter your name","Kishan");    // default name is Kishan
+            if(person == null || person == ""){
+                txt = "User cancelled this prompt.";
+            }else{
+                txt = "Hello " + person ;
+            }
+            document.getElementById("demo").innerHTML = txt;
+
+        }
+    </script>
+</body>
+</html>

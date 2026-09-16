@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temporal</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+
+    <script>
+        const date = new Temporal.Duration(0, 0, 0, 7, 2);
+        document.getElementById("demo").innerHTML = 
+        "The Duration is: " + date.toString() + "<br>" + 
+        "Days: " + date.days + "<br>" +
+        "Hours: " + date.hours;
+    </script>
+</body>
+
+</html>

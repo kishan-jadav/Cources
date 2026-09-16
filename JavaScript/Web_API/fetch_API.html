@@ -1,0 +1,31 @@
+<!-- JavaScript mein fetch() ka kaam kisi web server ya file se data download karna (ya data bhesna) hota hai, wo bhi bina
+poore webpage ko refresh kiye. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+    <script>
+        // async/await -> modern method for fetch data
+        async function getData(){
+            try{
+                let response = await fetch("fetch.txt");
+                let data = await response.text();
+
+                document.getElementById("demo").innerHTML = data;
+            }catch(error){
+                document.getElementById("demo").innerHTML = "Data not fount" + error.message;
+            }
+        }
+
+        getData();
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+
+<body>
+    <h2>Counter</h2>
+
+    <p id="count" style="font-size: 40px;">0</p>
+
+    <button onclick="increaseCount()">+</button>
+    <button onclick="decreaseCount()">-</button>
+    <button onclick="resetCount()">Reset</button>
+    <button onclick="saveCount()">Save</button>
+    <button onclick="loadCount()">Load</button>
+
+    <script>
+        // declare the counter
+        let count = 0;
+
+        // load the counter when the page opens
+        loadCount();
+
+        // function to display the counter
+        function updateCount() {
+            document.getElementById("count").innerHTML = count;
+        }
+
+        // Function to increase Counter
+        function increaseCount() {
+            count++;
+            updateCount();
+        }
+
+        // Function to decrease Counter
+        function decreaseCount() {
+            if (count > 0) {
+                count--;
+                updateCount();
+            }
+        }
+
+        // Function to reset Counter
+        function resetCount() {
+            count = 0;
+            updateCount();
+        }
+
+        // function to save Counter
+        function saveCount() {
+            localStorage.setItem("count", count);       // browser open hoy tya sudhi value store rahe, syntax -> localStorage.setItem(key, value);
+        }
+
+        // function to load count
+        function loadCount() {
+            let saved = localStorage.getItem("count");
+            if (saved != null) {
+                count = Number(saved);
+            }
+            updateCount();
+
+
+        }
+    </script>
+
+</body>
+
+</html>

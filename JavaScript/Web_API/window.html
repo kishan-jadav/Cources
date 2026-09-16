@@ -1,0 +1,23 @@
+<!-- Two properties can be used to determine the size of the browser window.
+The browser window (the browser viewport) is NOT including toolbars and scrollbars. -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window API</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+    <script>
+        document.getElementById("demo").innerHTML = 
+        "Browser inner window height: "+ window.innerHeight + "px <br>" +
+        "Browser inner window width: " + window.innerWidth + "px";
+    </script>
+</body>
+</html>
