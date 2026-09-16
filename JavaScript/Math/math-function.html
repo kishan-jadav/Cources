@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+
+    <script>
+
+        document.getElementById("demo").innerHTML =
+            "<p><b>Math.E:</b> " + Math.E + "</p>" +
+            "<p><b>Math.PI:</b> " + Math.PI + "</p>" +
+            "<p><b>Math.sqrt(64):</b> " + Math.sqrt(64) + "</p>" +  // square root 
+            "<p><b>Math.abs(-4.8):</b> " + Math.abs(-4.8) + "</p>" +  // convert into positive value
+            "<p><b>Math.min(12, 2, 435, -1, 3):</b> " + Math.min(12, 2, 435, -1, 3) + "</p>" +  // return min value
+            "<p><b>Math.max(12, 2, 435, -1, 3):</b> " + Math.max(12, 2, 435, -1, 3) + "</p>" +  // return max value
+            "<p><b>Math.random():</b> " + Math.random() + "</p>" +  // return random value between 0 to 1
+            "<p><b>Math.random() * 10: </b> " + Math.round(Math.random()*10) + "</p>" +  // return random value between 1 to 10, round use for int value 
+            "<p><b>Math.SQRT2:</b> " + Math.SQRT2 + "</p>" +
+            "<p><b>Math.SQRT1_2:</b> " + Math.SQRT1_2 + "</p>" +
+            "<p><b>Math.LN2:</b> " + Math.LN2 + "</p>" +
+            "<p><b>Math.LN10:</b> " + Math.LN10 + "</p>" +
+            "<p><b>Math.LOG2E:</b> " + Math.LOG2E + "</p>" +
+            "<p><b>Math.Log10E:</b> " + Math.LOG10E + "</p>"+
+            "<p><b>Math.round(2.6): </b>" + Math.round(2.6) + "</p>" + 
+            "<p><b>Math.ceil(2.1): </b>" + Math.ceil(2.1) + "</p>" +     // ceil = chhat(up)
+            "<p><b>Math.floor(2.9): </b>" + Math.floor(2.9) + "</p>" +  // floor = taliyu(down)
+            "<p><b>Math.trunc(2.9): </b>" + Math.trunc(2.9) + "</p>" +  //  remove point and return int value
+            "<p><b>Math.sign:</b> " + Math.sign(5) + "</p>" ;   // positive -> 1, negative -> -1, Zero-> 0 return kare
+    </script>
+</body>
+
+</html>

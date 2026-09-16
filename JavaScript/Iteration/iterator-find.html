@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iterator find() method</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+    <script>
+        const myIterator = Iterator.from("1234567890");
+
+        let result = myIterator.find(x => x > 5);   // find first graterthan 5     output= 6
+
+        let text = "";
+        for(const x of result){
+            text += x;
+        }
+
+        document.getElementById("demo").innerHTML = text;
+
+    </script>
+</body>
+</html>

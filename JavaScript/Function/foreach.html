@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For each</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+    <script>
+        const numbers = [34, 22, 7, 23, 0, 23];
+
+        let txt = "";
+        numbers.forEach(myFunction);
+        document.getElementById("demo").innerHTML = txt;
+
+        function myFunction(value){
+            txt += value + "<br>";
+        }
+    </script>
+</body>
+</html>

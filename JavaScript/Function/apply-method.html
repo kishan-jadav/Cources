@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>apply() method</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+    <script>
+        // syntax: functionName.apply(this, [arg1, arg2, ...]);
+
+        const person1 = {name: "Kishan"};
+        const person2 = {name: "Vishal"};
+        const person3 = {name: "Naresh"};
+
+        function greet(greeting){
+            return greeting + " " + this.name;
+        }
+
+        let message = greet.apply(person3, ["Hello"]);
+        document.getElementById("demo").innerHTML = message;
+    </script>
+</body>
+</html>

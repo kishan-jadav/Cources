@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+    <script>
+        const fruits = new Map();
+
+        fruits.set("apples",500);
+        fruits.set("mango",300);
+        fruits.set("banana",200);
+        
+        let numb = fruits.get("apples");
+
+        document.getElementById("demo").innerHTML = numb ;
+    </script>
+</body>
+</html>

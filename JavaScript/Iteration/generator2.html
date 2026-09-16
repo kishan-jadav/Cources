@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator yield key word</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+
+    <script>
+        // yield = pause, return = full stop
+        // yield value ne pause karine rakhe, return value ne direct bahar send kari de
+
+        function* myStream() {
+            yield 1;    // done = false
+            yield 2;    // done = false
+            yield 3;    // done = false
+        }
+
+        let myGenerator = myStream();
+        let text = "";
+
+        for (const x of myGenerator) {        // for loop last element print karshe, reason -> return(done=false) 
+            text += x;
+        }
+
+        document.getElementById("demo").innerHTML = text;
+
+    </script>
+</body>
+
+</html>

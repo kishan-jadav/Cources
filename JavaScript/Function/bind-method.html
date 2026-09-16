@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bind() method</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+    <script>
+        // syntax: const newFunction = functionName.bind(this, arg1, arg2, ...);
+
+        const person1 = {name: "Kishan"};
+        const person2 = {name: "Vishal"};
+        const person3 = {name: "Naresh"};
+
+        function greet(){
+            return "Hello" + " " + this.name;
+        }
+
+        const greetKishan = greet.bind(person1);
+
+        document.getElementById("demo").innerHTML = greetKishan();
+    </script>
+</body>
+</html>

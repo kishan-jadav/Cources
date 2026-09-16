@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Each</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+    <script>
+
+        const cars = new Map([
+            ["Bugatti", 500],
+            ["Lambo", 300],
+            ["Ferrari", 100]
+        ]);
+
+        let text = "";
+        cars.forEach(function(value, key){
+            text += key + ' = ' + value + '<br>';
+        })
+
+        document.getElementById("demo").innerHTML = text;
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>call()</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+    <script>
+
+        // syntax: functionName.call(this, arg1, arg2, ...);
+
+
+        const person1 = {name: "John"};
+        const person2 = {name: "Paul"};
+        const person3 = {name: "Ringo"};
+
+        function greet(greeting){
+            return greeting + " " + this.name;
+        }
+
+        let message = greet.call(person3, "Hello");
+        document.getElementById("demo").innerHTML = message;
+
+    </script>
+</body>
+</html>

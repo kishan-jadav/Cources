@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>toLocalString</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+    <script>
+        let price = 1200.00;
+
+        let dollar = price.toLocaleString("en-US", {style: "currency", currency:"USD"});
+
+        document.getElementById("demo").innerHTML = dollar;
+    </script>
+</body>
+</html>
