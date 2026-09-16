@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animate</title>
+</head>
+
+<body>
+    <button>Start Animation</button>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos dolorum, omnis laborum consectetur error illo
+        placeat ut minus ea, laudantium labore reiciendis nesciunt corporis amet officiis aliquid accusamus atque
+        deserunt! Deserunt cupiditate ipsa sunt officia voluptates cumque molestias iste molestiae autem illo unde
+        veniam impedit vitae nulla explicabo, suscipit ea!</p>
+    <div style="background-color:grey;height:80px;width:80px;position:absolute;"></div>
+
+    <script src="../js/jquery-4.0.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            
+            // $('button').click(function(){
+            //     $('div').animate({left: '250px'});
+            // });
+            
+            // Mltiple Properties
+            $('button').click(function(){
+                $('div').animate({
+                    left: '250px',
+                    opacity: 0.2,
+                    height: '150px',
+                    width: '150px',
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siblings Methods</title>
+    <style>
+        .siblings *{
+            color: lightgrey;
+            border: 2px solid ;
+            display: block;
+            margin: 15px;
+            padding: 5px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("h2").siblings().css({"color":"red"})
+        });
+    </script>
+</head>
+
+<body class="siblings" style="width: 500px;">
+    <div> div (parent)
+        <p>p </p>
+        <span>span</span>
+        <h2>h2</h2>
+        <h3>h3</h3>
+        <p>p</p>
+    </div>
+</body>
+
+</html>

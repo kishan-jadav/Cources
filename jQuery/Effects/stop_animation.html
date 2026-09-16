@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Animation</title>
+    <style>
+        .slide, .hello{
+            padding: 5px;
+            text-align: center;
+            font-size: large;
+            font-weight:600;
+            background-color:grey;
+            border: 1px solid black;
+        }
+
+        .hello{
+            padding: 50px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button>Stop Sliding</button><br><br>
+    <div class="slide">Click to slide down</div>
+    <div class="hello">Hello Bro.</div>
+
+    <script src="../js/jquery-4.0.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.slide').click(function(){
+                $('.hello').slideDown(5000);
+            });
+
+            $('button').click(function(){
+                $('.hello').stop();
+            });
+        });
+    </script>
+</body>
+</html>

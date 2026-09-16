@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=e, initial-scale=1.0">
+    <title>Toggle Classes</title>
+    <style>
+        .red{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <button>Class Toggle</button>
+    <p class="red">This is a mini paragraph.</p>
+    <p class="red">This is a another paragraph.</p>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('button').click(function(){
+                $('p').toggleClass('red');
+            }); 
+        });
+    </script>
+</body>
+</html>

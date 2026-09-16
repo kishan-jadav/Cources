@@ -1,0 +1,119 @@
+<!--Event- All the different visitors' actions that a web page can respond to are called events.
+jQuery ma browser ke user na action ne events kahe che.
+An event represents the precise moment when something happens.-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <form>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati odio natus quod corrupti dolor qui
+            quisquam
+            ipsum placeat distinctio ut? Officiis, distinctio fugit. Adipisci, voluptas officia veniam laborum dolores
+            accusantium voluptates saepe, aperiam obcaecati libero inventore. Repellendus hic adipisci molestias velit
+            pariatur laudantium aspernatur delectus. Voluptatibus repellendus velit ipsum nisi?</p>
+
+        <input type="text">
+
+        <input type="submit">
+    </form>
+    <script src="js/jquery-4.0.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            // click
+            // $('p').click(function(){
+            //     console.log('This is click event.')
+            // });
+
+            //double click
+            // $('p').dblclick(function () {
+            //     console.log('This is dblclick event.');
+            // });
+
+            //mouse enter
+            // $('p').mouseenter(function(){
+            //     console.log("This is mouseenter event");
+            // });
+
+            //mouse leave
+            // $('p').mouseleave(function(){
+            //     console.log("This is mouseleave event");
+            // });
+
+            //mouse down
+            // $('p').mousedown(function(){
+            //     alert("This is mousedown event");
+            // });
+
+            // mouse up
+            // $('p').mouseup(function(){
+            //     alert("This is mousedown event");
+            // });
+
+            // mouse hover
+            // $('p').hover(function(){
+            //     console.log('Mouse hovering....');
+            // },
+            // function(){
+            //     console.log('Mouse hovering end...');
+            // });
+
+            // focus
+            // $('input').focus(function(){
+            //     $(this).css('background-color','yellow');
+            // });
+
+            // blur
+            // $('input').blur(function(){
+            //     $(this).css('background-color','red');
+            // });
+
+            // on() Method - attaches one or more event handlers for the selected elements.
+            // $('p').on({
+            //     mouseenter: function(){
+            //         $(this).css('background-color','yellow');
+            //     },
+
+            //     mouseleave: function(){
+            //         $(this).css('background-color','lightgreen');
+            //     },
+
+            //     click: function(){
+            //         $(this).css('background-color','red');
+            //     }
+            // });
+
+            //key press
+            // $('input').keypress(function(){
+            //     console.log("Key pressed.");
+            // });
+
+            // key down
+            // $('input').keydown(function(){
+            //     console.log("Key down.");
+            // });
+
+            // key down
+            // $('input').keyup(function(){
+            //     console.log("Key up.");
+            // });
+
+            //submit
+            // $('form').submit(function (e) {
+            //     e.preventDefault();     // page ko reload thavathi roke..
+            //     console.log("Submit event triggerd");
+            // });
+
+
+        });
+    </script>
+</body>
+
+</html>

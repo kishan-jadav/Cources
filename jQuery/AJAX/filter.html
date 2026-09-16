@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filterable Table</title>
+</head>
+
+<body>
+    <input id="myInput" type="search" placeholder="Search here..">
+    <br><br>
+    <table border="1" style="border-collapse: collapse;">
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Email</th>
+        </tr>
+        <tbody id="myTable">
+            <tr>
+                <td>Kishan</td>
+                <td>Jadav</td>
+                <td>kishanjadav366@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Vishal</td>
+                <td>Makwana</td>
+                <td>vishal777@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Naresh </td>
+                <td>Grambhadiya</td>
+                <td>naresh1122@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Mehul</td>
+                <td>Bariya</td>
+                <td>mehul@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Gopal</td>
+                <td>Jadav</td>
+                <td>gopaljadav1@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Abhay</td>
+                <td>Sariya</td>
+                <td>abhay10@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Yash</td>
+                <td>Parmar</td>
+                <td>yash12345@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Shital</td>
+                <td>Metaliya</td>
+                <td>shitalmetaliya7@gmail.com</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#myInput").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#myTable tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

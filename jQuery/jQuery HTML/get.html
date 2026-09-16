@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Content</title>
+</head>
+<body>
+    <button id="text">Show Text</button>
+    <button id="html">Show HTML</button><br><br>
+    <p>This is some <b>bold</b> text in paragraph.</p><br><br><br>
+
+    Name: <input>
+    <button id="name">Get Value</button><br><br><br>
+
+    <a href="https://www.google.com/" id="google">Google</a> &nbsp;
+    <button id="link">Show href value</button>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#text').click(function(){
+                alert("Text : " + $('p').text());
+            });
+
+            $('#html').click(function(){
+                alert("HTML : " + $('p').html());
+            });
+
+            $('#name').click(function(){
+                alert("Value : " + $('input').val());
+            });
+
+            $('#link').click(function(){
+                alert($('#google').attr("href"));
+            });
+            
+
+
+        });
+    </script>
+</body>
+</html>

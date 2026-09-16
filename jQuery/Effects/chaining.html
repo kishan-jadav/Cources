@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaining</title>
+</head>
+<body>
+    <button>Click me</button>
+    <p>This is chaining.</p>
+
+    <!-- <script src="../js/jquery-4.0.0.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>    <!-- Google -->
+    <script>
+        $(document).ready(function(){
+            $('button').click(function(){
+                $('p').css("color","red").slideUp(2000).slideDown(2000);
+                });
+        });
+    </script>
+</body>
+</html>

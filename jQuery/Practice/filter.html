@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtering data</title>
+
+</head>
+
+<body>
+    <input type="search" id="myInput" placeholder="Search..."><br><br>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>City</th>
+            </tr>
+        </thead>
+        <tbody id="myTable">
+            <tr>
+                <td>Kishan</td>
+                <td>Jadav</td>
+                <td>Sukhpur</td>
+            </tr>
+            <tr>
+                <td>Vishal</td>
+                <td>Makwana</td>
+                <td>Bhadli</td>
+            </tr>
+            <tr>
+                <td>Naresh</td>
+                <td>Grambhadiya</td>
+                <td>Nilvada</td>
+            </tr>
+            <tr>
+                <td>Mehul</td>
+                <td>Bariya</td>
+                <td>Matel</td>
+            </tr>
+            <tr>
+                <td>Gopal</td>
+                <td>Jadav</td>
+                <td>Sukhpur</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#myInput").on("keyup", function(){
+                var value = ($(this).val().toLowerCase());
+                $("#myTable tr").filter(function(){
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                })
+            });
+        });
+    </script>
+</body>
+
+</html>

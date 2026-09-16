@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animate Queue Functionality</title>
+</head>
+
+<body>
+    <button>Start Animation</button>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla nostrum voluptas quisquam consequatur praesentium
+        adipisci officiis? Voluptas, unde cum natus vitae repellendus consectetur rem culpa distinctio assumenda nisi
+        dolorem neque voluptatem ab amet debitis modi hic tenetur minus! Recusandae alias quod iste in incidunt est
+        possimus! Enim rerum reprehenderit molestias.</p>
+    <div style="background-color:grey;height:100px;width:100px;position:absolute;"></div>
+
+
+    <script src="../js/jquery-4.0.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('button').click(function(){
+    
+                // $('div').animate({height: '200px'});
+                // $('div').animate({width: '200px'});
+                // $('div').animate({height: '100px'});
+                // $('div').animate({width: '100px'});
+
+                        // or
+
+                // var method
+                var div = $("div");
+                div.animate({height:'200px'});
+                div.animate({width:'200px'});
+                div.animate({height:'100px'});
+                div.animate({width: '100px'});
+
+            });
+        });
+    </script>
+</body>
+
+</html>

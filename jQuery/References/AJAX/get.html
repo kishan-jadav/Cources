@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>get method</title>
+</head>
+
+<body>
+    <button>Send an HTTP GET request to a page and get the result back</button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $.get("demo.txt", function (data, status) {
+                    alert("Data: " + data + "\nStatus: " + status);
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

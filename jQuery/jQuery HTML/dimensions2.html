@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outer Width</title>
+    <style>
+        div{
+            margin: 10px;
+            padding: 20px;
+            background-color: grey;
+            height: 100px;
+            width: 200px;
+            border: 2px solid;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+
+    <button>Get InnerWidth</button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('button').click(function(){
+                var txt = "";
+                txt += "Height : " + $('div').height() + "<br>";
+                txt += "Width : " + $('div').width() + "<br><br>";
+                txt += "Inner height : " + $('div').outerHeight() + "<br>";     // top-padding(20px) + bottom-padding(20px) + height(100px) = 140px
+                txt += "Inner width : " + $('div').outerWidth() + "<br>";
+                $('div').html(txt);
+            });
+        });
+    </script>
+</body>
+</html>

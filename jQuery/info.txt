@@ -1,0 +1,11 @@
+What is jQuery ?
+-> jQuery is a lightweight, "write less, do more", java script library.
+-> The perpose of jQuery is to make it much easier to use java script on website. 
+
+-> Basic syntax is: $(selector).action()
+
+
+-> Page load thay jaay pachi jQuery perform karvi
+    $(document).ready(function(){
+        // jQuery methods go here...
+    });

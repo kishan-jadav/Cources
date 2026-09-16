@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Method</title>
+    <style>
+        .p1{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <button id="get">Get Css</button>
+    <p class="p1">This is mini paragraph.</p>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#get').click(function(){
+                alert("Font color : " + $('.p1').css("color"));
+            });
+        });
+    </script>
+</body>
+</html>

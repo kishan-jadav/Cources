@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traversing Parents Method</title>
+    <style>
+        .ancestors *{
+            display: block;
+            border: 2px solid lightgrey;
+            color: lightgrey;
+            padding: 5px;
+            margin: 15px;
+
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('span').parents('ul').css({"color":"red", "border":"2px solid"});
+        });
+    </script>
+</head>
+<body class="ancestors"> body (great-great grand parent)
+        <div style="width: 500px;">div (great-grand parent)
+            <ul>ul (grand parent)
+                <li>(direct parent)
+                    <span>span</span>
+                </li>
+            </ul>
+        </div>
+
+</body>
+</html>

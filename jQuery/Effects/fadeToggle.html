@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fade Out</title>
+</head>
+<body>
+    <button>Fade Toggle</button><br><br>
+    <div id="box1" style="width:80px;height:80px;background-color:red;"></div><br>
+    <div id="box2" style="width:80px;height:80px;background-color:green;"></div><br>
+    <div id="box3" style="width:80px;height:80px;background-color:blue;"></div><br>
+
+    <script src="../js/jquery-4.0.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('button').click(function(){
+                $('#box1').fadeToggle(1000);
+                $('#box2').fadeToggle("slow");
+                $('#box3').fadeToggle();
+            });
+        });
+    </script>
+</body>
+</html>

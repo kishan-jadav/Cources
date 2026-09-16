@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Succeed</title>
+
+    <!-- 
+    responseTxt - contains the resulting content if the call succeeds
+    statusTxt - contains the status of the call
+    xhr - contains the XMLHttpRequest object
+    -->
+
+</head>
+
+<body>
+    <button>Get external content</button>
+    <div></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("div").load("demo2.txt", function (responseTxt, statusTxt, xhr) {
+                    if (statusTxt == "success")
+                        alert("External content loaded successfully!");
+                    if (statusTxt == "error")
+                        alert("Error : " + xhr.status + " : " + xhr.statusTxt);
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

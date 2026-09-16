@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fade Up - Fade Down</title>
+</head>
+<body>
+    <button id="up">Slide Up</button> 
+    <button id="down">Slide Down</button>
+    <p>This is a paragraph.</p>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#up").click(function(){
+                $("p").slideUp();
+            });
+
+            $("#down").click(function(){
+                $("p").slideDown();
+            })
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>* Selector</title>
+</head>
+
+<body>
+    <h2>This is my homepage</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum neque provident possimus corrupti. Mollitia
+        veritatis quisquam explicabo, nam aut quae totam animi ducimus, quam voluptates dolore reiciendis sapiente quas
+        sed facilis tenetur, corporis id. Sapiente id eum magni, pariatur, incidunt obcaecati ex consequuntur sed
+        tempora voluptate iste fugit! Maxime, consectetur?</p>
+    <p>This is another paragraph</p>
+    <button>Red</button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("*").css("color","red");      // select all elements
+            });
+        });
+    </script>
+</body>
+
+</html>

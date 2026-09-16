@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fadeTo() Effect</title>
+</head>
+<body>
+    <div style="height: 100px;width: 100px;border: 2px solid;background-color: grey;"></div><br>
+    <button>Fade To</button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("div").fadeTo(1000, 0.4);
+            });
+        });
+    </script>
+</body>
+</html>

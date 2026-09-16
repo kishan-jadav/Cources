@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Attributes</title>
+</head>
+<body>
+    <a href="https://www.google.com/" title="Old title">This is link</a><br><br>
+    <button>Change href value</button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('button').click(function(){
+                // $('a').attr('href','https://www.youtube.com');   // single value
+                $('a').attr({'href' : 'https://www.youtube.com',
+                            'title' : 'New title'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

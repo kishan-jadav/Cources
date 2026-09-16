@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filter() method</title>
+</head>
+<body>
+    <h2>Welcome to my Homepage</h2>
+    <p>This is a paragraph.</p>
+    <p class="intro">This is a paragraph.</p>
+    <p class="intro">This is a paragraph.</p>
+    <p>This is a paragraph.</p>
+    <p>This is a paragraph.</p>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("p").filter(".intro").css("background-color","pink");
+        });
+    </script>
+</body>
+</html>

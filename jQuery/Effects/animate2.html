@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animate</title>
+</head>
+<body>
+    
+    <button>Start Animation</button><br><br>
+    <div style="height:100px;width:200px;background-color:grey;position:absolute;">Hello</div>
+    
+    <script src="../js/jquery-4.0.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('button').click(function(){
+                var div = $('div');
+                div.animate({left: '200px'}, "slow");
+                div.animate({fontSize: '40px'},"slow");
+            });
+        });
+    </script>
+</body>
+</html>
