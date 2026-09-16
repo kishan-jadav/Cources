@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Map - All Features Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        #googleMap {
+            border: 1px solid black;
+            width: 90%;
+            height: 500px;
+        }
+
+        .legend {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .legend span {
+            display: inline-block;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Google Map - Marker, Polyline, Polygon, Circle, Rectangle, Info Window</h2>
+
+    <div id="googleMap"></div>
+
+    <div class="legend">
+        <span>🔴 Marker (London)</span>
+        <span>🔵 Polyline (London → Paris → Berlin)</span>
+        <span>🟦 Polygon (Triangle area)</span>
+        <span>🟢 Circle (around London)</span>
+        <span>🟧 Rectangle (custom bounds)</span>
+    </div>
+
+    <script>
+        function myMap() {
+            // Base map centered on London
+            var mapProp = {
+                center: { lat: 51.508742, lng: -0.120850 },
+                zoom: 5,
+            };
+            var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+
+            // 1. MARKER - single location on the map
+            var marker = new google.maps.Marker({
+                position: { lat: 51.508742, lng: -0.120850 },
+                map: map,
+                title: "London"
+            });
+
+            // 6. INFO WINDOW - popup that opens when marker is clicked
+            var infoWindow = new google.maps.InfoWindow({
+                content: "<h3>London</h3><p>Capital of the United Kingdom</p>"
+            });
+
+            marker.addListener("click", function () {
+                infoWindow.open(map, marker);
+            });
+
+            // 2. POLYLINE - series of straight connected lines
+            var lineCoordinates = [
+                { lat: 51.508742, lng: -0.120850 }, // London
+                { lat: 48.856613, lng: 2.352222 },  // Paris
+                { lat: 52.520008, lng: 13.404954 }  // Berlin
+            ];
+
+            var polyline = new google.maps.Polyline({
+                path: lineCoordinates,
+                geodesic: true,
+                strokeColor: "#0000FF",
+                strokeOpacity: 1.0,
+                strokeWeight: 3
+            });
+            polyline.setMap(map);
+
+            // 3. POLYGON - closed shape connecting London, Paris, Berlin
+            var polygonCoordinates = [
+                { lat: 51.508742, lng: -0.120850 }, // London
+                { lat: 48.856613, lng: 2.352222 },  // Paris
+                { lat: 52.520008, lng: 13.404954 }, // Berlin
+                { lat: 51.508742, lng: -0.120850 }  // back to London (closes shape)
+            ];
+
+            var polygon = new google.maps.Polygon({
+                paths: polygonCoordinates,
+                strokeColor: "#0000AA",
+                strokeOpacity: 0.6,
+                strokeWeight: 2,
+                fillColor: "#0000AA",
+                fillOpacity: 0.15
+            });
+            polygon.setMap(map);
+
+            // 4. CIRCLE - around London
+            var circle = new google.maps.Circle({
+                strokeColor: "#00FF00",
+                strokeOpacity: 0.8,
+                strokeWeight: 2,
+                fillColor: "#00FF00",
+                fillOpacity: 0.25,
+                map: map,
+                center: { lat: 51.508742, lng: -0.120850 },
+                radius: 150000 // meters
+            });
+
+            // 5. RECTANGLE - custom bounds over central Europe
+            var rectangle = new google.maps.Rectangle({
+                strokeColor: "#FF8C00",
+                strokeOpacity: 0.8,
+                strokeWeight: 2,
+                fillColor: "#FF8C00",
+                fillOpacity: 0.2,
+                map: map,
+                bounds: {
+                    north: 54.0,
+                    south: 47.0,
+                    east: 16.0,
+                    west: 5.0
+                }
+            });
+        }
+    </script>
+
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlpb2Vtu6OKGptfMoVB-xeUtzIp9mq7rM&callback=myMap"></script>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Map</title>
+
+    <style>
+        #googleMap {
+            border: 1px solid black;
+            width: 50%;
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Google Map</h2>
+
+    <div id="googleMap"></div>
+
+    <script>
+        function myMap() {
+
+            var mapProp = {
+
+                // Map center
+                center: new google.maps.LatLng(51.508742, -0.120850),
+
+                // Zoom level
+                zoom: 5,
+
+                // Default map type
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+
+                // Map type control show karna
+                mapTypeControl: true,
+
+                // Map type control ki settings
+                mapTypeControlOptions: {
+
+                    // All map types
+                    mapTypeIds: [
+                        google.maps.MapTypeId.ROADMAP,
+                        google.maps.MapTypeId.SATELLITE,
+                        google.maps.MapTypeId.HYBRID,
+                        google.maps.MapTypeId.TERRAIN
+                    ],
+
+                    // Button style
+                    style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+
+                    // Button position
+                    position: google.maps.ControlPosition.TOP_RIGHT
+                }
+            };
+
+            // Google Map create
+            var map = new google.maps.Map(
+                document.getElementById("googleMap"),
+                mapProp
+            );
+        }
+    </script>
+
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlpb2Vtu6OKGptfMoVB-xeUtzIp9mq7rM&callback=myMap">
+    </script>
+
+</body>
+
+</html>

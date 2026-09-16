@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Map - Events Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        #googleMap {
+            border: 1px solid black;
+            width: 90%;
+            height: 500px;
+        }
+
+        .info-box {
+            margin-top: 12px;
+            padding: 10px;
+            background: #f2f2f2;
+            border: 1px solid #ccc;
+            width: 90%;
+            font-size: 14px;
+            min-height: 20px;
+        }
+
+        .instructions {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .instructions li {
+            margin-bottom: 4px;
+        }
+    </style>
+</head>
+
+<body onload="myMap()">
+    <h2>Google Map - Events </h2>
+
+    <ul class="instructions">
+        <li><b>Map par click karein</b> → us jagah ek naya marker add hoga</li>
+        <li><b>London wale marker ko drag karein</b> → drag khatam hone par nayi position neeche dikhegi</li>
+        <li><b>London wale marker par mouse le jaayein</b> → Info Window khulegi (mouseover / mouseout)</li>
+        <li><b>Map ko zoom in/out karein</b> → current zoom level neeche update hoga</li>
+    </ul>
+
+    <div id="googleMap"></div>
+
+    <div class="info-box" id="eventLog">Event details yahan dikhenge...</div>
+
+    <script>
+        function myMap() {
+            var mapProp = {
+                center: { lat: 51.508742, lng: -0.120850 },
+                zoom: 5,
+            };
+            var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+
+            var logBox = document.getElementById("eventLog");
+
+            // Draggable marker on London
+            var marker = new google.maps.Marker({
+                position: { lat: 51.508742, lng: -0.120850 },
+                map: map,
+                title: "London (draggable)",
+                draggable: true
+            });
+
+            var infoWindow = new google.maps.InfoWindow({
+                content: "<h3>London</h3><p>Capital of the United Kingdom</p>"
+            });
+
+            // EVENT: mouseover - open InfoWindow 
+            google.maps.event.addListener(marker, 'mouseover', function () {
+                infoWindow.open(map, marker);
+            });
+
+            // EVENT: mouseout - close InfoWindow 
+            google.maps.event.addListener(marker, 'mouseout', function () {
+                infoWindow.close();
+            });
+
+            // EVENT: dragend 
+            google.maps.event.addListener(marker, 'dragend', function (event) {
+                logBox.innerHTML = "Marker ki nayi position &rarr; Lat: " +
+                    event.latLng.lat().toFixed(4) + ", Lng: " + event.latLng.lng().toFixed(4);
+            });
+
+            // EVENT: click on map - add new marker where you clicked
+            google.maps.event.addListener(map, 'click', function (event) {
+                var newMarker = new google.maps.Marker({
+                    position: event.latLng,
+                    map: map
+                });
+
+                logBox.innerHTML = "Naya marker add hua &rarr; Lat: " +
+                    event.latLng.lat().toFixed(4) + ", Lng: " + event.latLng.lng().toFixed(4);
+            });
+
+            // EVENT: zoom_changed - track zoom level
+            google.maps.event.addListener(map, 'zoom_changed', function () {
+                logBox.innerHTML = "Zoom level badla &rarr; Current zoom: " + map.getZoom();
+            });
+        }
+    </script>
+
+    <script async
+        src="https://maps.googleapis.com/maps/api/js"></script>
+</body>
+
+</html>

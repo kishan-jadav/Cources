@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Map - Controls Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        #googleMap {
+            border: 1px solid black;
+            width: 90%;
+            height: 500px;
+        }
+
+        .instructions {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .instructions li {
+            margin-bottom: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Google Map - Controls Demo</h2>
+
+    <ul class="instructions">
+        <li><b>Top-right</b> me Map / Satellite toggle (Map Type Control)</li>
+        <li><b>Right-bottom</b> me + / − zoom buttons (Zoom Control)</li>
+        <li><b>Left-bottom</b> me Street View peg-man icon (Street View Control)</li>
+        <li><b>Right-top</b> me Fullscreen button (Fullscreen Control)</li>
+        <li><b>Left-bottom corner</b> me distance scale (Scale Control)</li>
+    </ul>
+
+    <div id="googleMap"></div>
+
+    <script>
+        function myMap() {
+            var mapProp = {
+                center: { lat: 51.508742, lng: -0.120850 },
+                zoom: 5,
+
+                // Default map type: normal roadmap
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+
+                // Zoom control - right bottom me
+                zoomControl: true,
+                zoomControlOptions: {
+                    position: google.maps.ControlPosition.RIGHT_BOTTOM
+                },
+
+                // Map type control (Map / Satellite) - top right me
+                mapTypeControl: true,
+                mapTypeControlOptions: {
+                    position: google.maps.ControlPosition.TOP_RIGHT
+                },
+
+                // Street view peg-man - left bottom me
+                streetViewControl: true,
+                streetViewControlOptions: {
+                    position: google.maps.ControlPosition.LEFT_BOTTOM
+                },
+
+                // Fullscreen button - right top me
+                fullscreenControl: true,
+                fullscreenControlOptions: {
+                    position: google.maps.ControlPosition.RIGHT_TOP
+                },
+
+                // Distance scale dikhana
+                scaleControl: true,
+
+                // Rotate control band (45-degree imagery ke liye)
+                rotateControl: false
+            };
+
+            var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+
+            // Ek marker bhi taaki map khaali na lage
+            new google.maps.Marker({
+                position: { lat: 51.508742, lng: -0.120850 },
+                map: map,
+                title: "London"
+            });
+        }
+    </script>
+
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlpb2Vtu6OKGptfMoVB-xeUtzIp9mq7rM&callback=myMap"></script>
+</body>
+
+</html>
